@@ -1,0 +1,17 @@
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: var(--transition-fast);
+}
+
+@media (max-width: 480px) {
+    .nav {
+        gap: 10px;
+    }
+}
