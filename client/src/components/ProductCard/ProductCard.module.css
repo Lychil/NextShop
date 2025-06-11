@@ -1,0 +1,114 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition-fast);
+}
+
+.card:hover .image {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 79, 68, 0.7), transparent 60%);
+    opacity: 0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 1rem;
+    transition: var(--transition-fast);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.more {
+    background: white;
+    color: var(--primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.favoriteButton {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--border-r-circle);
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: var(--transition-fast);
+}
+
+.favoriteButton:hover {
+    background-color: var(--primary-light);
+}
+
+.details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.name {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.4;
+    color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+.buyButton {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: var(--font-size-sm);
+    transition: var(--transition-fast);
+}
+
+.buyButton:hover {
+    background-color: var(--primary-light);
+}
