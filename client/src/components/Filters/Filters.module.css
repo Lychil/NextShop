@@ -1,0 +1,53 @@
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.priceWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.priceLabel {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary);
+}
+
+.priceInput {
+    width: 80px;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--primary);
+    border-radius: var(--border-r-sm);
+    font-size: var(--font-size-base);
+}
+
+.dash {
+    font-size: var( --font-size-xl);
+    color: var(--primary);
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.circleBtn {
+    background-color: var(--primary);
+    border-radius: var(--border-r-circle);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.circleBtn:hover {
+    opacity: 0.5;
+}

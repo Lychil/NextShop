@@ -1,0 +1,29 @@
+.header {
+    background-color: var(--primary);
+    padding: 5px 20px;
+    color: white;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    transition: var(--transition-fast);
+}
+
+.logoLink:hover,
+.logoLink:focus {
+    opacity: 0.5;
+    outline: none;
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px 10px;
+    }
+}

@@ -1,0 +1,51 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input {
+    width: 100%;
+    padding: 0.75rem 44px 0.75rem 45px;
+    border: 2px solid var(--primary);
+    border-radius: 9999px;
+    font-size: var(--font-size-base);
+    height: 40px;
+}
+
+.icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.iconCircle {
+    background-color: var(--primary);
+    border-radius: 9999px;
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clear {
+    position: absolute;
+    color: black;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.clear img {
+    opacity: 0.5;
+    transition: var(--transition-fast);
+}
+
+.clear:hover img {
+    opacity: 1;
+}
