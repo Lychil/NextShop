@@ -1,0 +1,18 @@
+.favorites {
+    padding: 2rem 0;
+}
+
+.title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.empty {
+    text-align: center;
+    color: #555;
+    font-size: var(--font-size-lg);
+    margin-top: 2rem;
+}

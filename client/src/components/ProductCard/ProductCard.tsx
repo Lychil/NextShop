@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import styles from "./ProductCard.module.css";
+import styles from "@/components/ProductCard/ProductCard.module.css";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -10,9 +10,10 @@ type Props = {
     name: string;
     image: StaticImageData;
     price: number;
+    isFavoritePage?: boolean;
 };
 
-export default function ProductCard({ id, name, image, price }: Props) {
+export default function ProductCard({ id, name, image, price, isFavoritePage = false }: Props) {
     const handleFavoriteClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation();
     };
@@ -36,20 +37,22 @@ export default function ProductCard({ id, name, image, price }: Props) {
                     <span className={styles.more}>Подробнее</span>
                 </div>
 
-                <button
-                    type="button"
-                    className={styles.favoriteButton}
-                    onClick={handleFavoriteClick}
-                    aria-label="Добавить в избранное"
-                >
-                    <Image
-                        src="/icons/favorite.svg"
-                        alt=""
-                        width={16}
-                        height={16}
-                        aria-hidden="true"
-                    />
-                </button>
+                {!isFavoritePage &&
+                    <button
+                        type="button"
+                        className={styles.favoriteButton}
+                        onClick={handleFavoriteClick}
+                        aria-label="Добавить в избранное"
+                    >
+                        <Image
+                            src="/icons/favorite.svg"
+                            alt=""
+                            width={16}
+                            height={16}
+                            aria-hidden="true"
+                        />
+                    </button>
+                }
             </div>
 
             <div className={styles.details}>
