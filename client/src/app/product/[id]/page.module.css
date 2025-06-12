@@ -1,0 +1,120 @@
+.product {
+    padding: 3rem 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.imageWrapper {
+    flex: 1;
+    text-align: center;
+}
+
+.image {
+    border-radius: var(--border-r-lg);
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.title {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary);
+}
+
+.description {
+    font-size: var(--font-size-base);
+    color: #444;
+    line-height: 1.6;
+    border-left: 4px solid var(--primary);
+    padding-left: 1rem;
+}
+
+.price {
+    font-size: var(--font-size-2xl);
+    color: var(--primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.buyBtn {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-base);
+    transition: var(--transition-fast);
+}
+
+.buyBtn:hover {
+    background-color: var(--primary-light);
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity {
+    font-size: var(--font-size-xl);
+    min-width: 2rem;
+    text-align: center;
+}
+
+.circleBtn {
+    background-color: var(--primary);
+    color: white;
+    border-radius: var(--border-r-circle);
+    width: 36px;
+    height: 36px;
+    font-size: var(--font-size-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-fast);
+}
+
+.circleBtn:hover {
+    background-color: var(--primary-light);
+}
+
+.confirmBtn {
+    background-color: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 0.6rem 1.25rem;
+    border-radius: 999px;
+    font-weight: var(--font-weight-semibold);
+    transition: background-color 0.2s ease;
+}
+
+.confirmBtn:hover {
+    background-color: var(--primary);
+    color: white;
+}
