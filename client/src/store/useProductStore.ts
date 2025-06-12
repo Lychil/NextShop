@@ -1,18 +1,10 @@
-import { StaticImageData } from 'next/image';
+import { Product } from '@/types/types';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-export type Product = {
-    id: string;
-    name: string;
-    image: StaticImageData;
-    price: number;
-    description: string;
-};
-
 type ProductState = {
     products: Product[];
-    setProducts: (products: Product[]) => void;
+    setProducts: (items: Product[]) => void;
     reset: () => void;
 };
 
@@ -22,8 +14,8 @@ export const useProductStore = create<ProductState>()(
     persist(
         (set, get) => ({
             products,
-            setProducts: (products) => set(() => ({ products})),
-            reset: () => set(() => ({products: []})),
+            setProducts: (items) => set({products: items}),
+            reset: () => set({products: []}),
         }),
         {
             name: 'product-storage',

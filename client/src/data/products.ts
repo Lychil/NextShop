@@ -1,4 +1,4 @@
-import { Product } from "@/store/useProductStore";
+import { Product } from "@/types/types";
 import img1 from "@/images/Getsuren.png";
 import img2 from "@/images/Honōran.png";
 import img3 from "@/images/Kageshida.png";
