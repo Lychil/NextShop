@@ -8,11 +8,10 @@ import { useProductStore } from "@/store/useProductStore";
 import { productList } from "@/data/products";
 
 export default function ProductSection() {
-    const products = useProductStore(state => state.products);
-    const setProducts = useProductStore(state => state.setProducts);
+    const { products, init } = useProductStore();
 
     useEffect(() => {
-        setProducts(productList);
+        init(productList);
     }, []);
 
     return (
